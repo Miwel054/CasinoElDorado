@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Casino El Dorado</title>
+    <meta name="description" content="Casino El Dorado - Disfruta de los mejores juegos de casino online. Juega ahora y gana en grande!">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="../imagenes/logo.png" alt="Casino El Dorado Logo">
+            </div>
+            
+            <nav class="nav-menu">
+                <ul>
+                    <ul>
+                        <li><a href="../index.html">Inicio</a></li>
+                        <li><a href="juegos.html">Juegos</a></li>
+                        <li><a href="promociones.html">Promociones</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+                </ul>
+            </nav>
+            <div class="auth-buttons">
+                <button id="loginButton">Iniciar Sesión</button>
+                <button id="registerButton">Registrarse</button>
+            </div>
+            <button class="burger-menu" onclick="toggleMenu()">☰</button>
+        </div>
+    </header>
+    <br>
+    <section class="complaints">
+        <h2>Contáctanos</h2>
+        <form id="complaintsForm">
+            <label for="name">Nombre:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="phone">Número de Teléfono:</label>
+            <input type="tel" id="phone" name="phone" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="message">Mensaje:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+            
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <div class="subscribe-section">
+                <h3>SUBSCRIBE NOW</h3>
+                <form id="subscribeForm">
+                    <input type="email" id="subscribeEmail" name="subscribeEmail" placeholder="Enter your email" required>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+            <div class="links-section">
+                <h3>LINKS</h3>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Game</a></li>
+                    <li><a href="#">Customer</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="contact-section">
+                <h3>CONTACT US</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.</p>
+            </div>
+        </div>
+        <p>&copy; 2024 Casino Online. Todos los derechos reservados.</p>
+    </footer>
+
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('loginModal')">&times;</span>
+            <h2>Iniciar Sesión</h2>
+            <form>
+                <label for="loginUsername">Usuario:</label>
+                <input type="text" id="loginUsername" name="loginUsername" required>
+                <label for="loginPassword">Contraseña:</label>
+                <input type="password" id="loginPassword" name="loginPassword" required>
+                <button type="submit">Entrar</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="registerModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('registerModal')">&times;</span>
+            <h2>Registrarse</h2>
+            <form>
+                <label for="registerUsername">Usuario:</label>
+                <input type="text" id="registerUsername" name="registerUsername" required>
+                <label for="registerEmail">Correo Electrónico:</label>
+                <input type="email" id="registerEmail" name="registerEmail" required>
+                <label for="registerPassword">Contraseña:</label>
+                <input type="password" id="registerPassword" name="registerPassword" required>
+                <button type="submit">Registrarse</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = "none";
+        }
+    </script>
+    <script src="../script.js"></script>
+</body>
+</html>

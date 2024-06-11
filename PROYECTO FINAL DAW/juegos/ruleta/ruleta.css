@@ -1,0 +1,114 @@
+/* Estilos generales */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1d1f27;
+    color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #111;
+    color: white;
+    padding: 10px 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+    flex-shrink: 0;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+footer {
+    background-color: #111;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    box-shadow: 0 -2px 4px rgba(0,0,0,0.5);
+    flex-shrink: 0;
+    margin-top: auto; /* Este estilo asegura que el footer esté siempre en la parte inferior */
+}
+
+
+.roulette-container {
+    text-align: center;
+}
+
+.roulette {
+    width: 300px;
+    height: 300px;
+    border: 10px solid #fff;
+    border-radius: 50%;
+    position: relative;
+    margin: 20px auto;
+    background-image: conic-gradient(
+        red 0deg 30deg, 
+        black 30deg 60deg, 
+        red 60deg 90deg, 
+        black 90deg 120deg, 
+        red 120deg 150deg, 
+        black 150deg 180deg, 
+        red 180deg 210deg, 
+        black 210deg 240deg, 
+        red 240deg 270deg, 
+        black 270deg 300deg, 
+        red 300deg 330deg, 
+        black 330deg 360deg
+    );
+    animation: spin 2s linear infinite;
+}
+
+.ball {
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.input-container {
+    margin-bottom: 20px;
+}
+
+.controls {
+    margin-bottom: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #006400;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    margin: 5px;
+}
+
+#result {
+    margin-top: 20px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+
